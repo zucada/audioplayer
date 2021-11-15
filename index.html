@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Audio Player</title>
+    
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #playlist {
+            list-style: none;
+        }
+
+        #playlist li {
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
+
+        #playlist li a {
+            color: white;
+            text-decoration: none;
+            font-size: 50px;
+            padding: 10px;
+            font-family: sans-serif;
+        }
+
+        #playlist .current-song a {
+            color: white;
+            background-color: rgb(192, 12, 177);
+        }
+
+        .radio {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url(assets/img/rain.gif);
+            background-size: cover;
+            gap: 30px;
+            
+        }
+
+        .trigun {
+            width: 100px;
+        }
+
+        audio {
+            display: none;
+        }
+
+        .yamyam {
+            width: 100px;
+        }
+
+        .missyou {
+            width: 100px;
+        }
+
+        #teste {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .porra {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            align-items: center;
+            border: 2px solid rgba(192, 12, 177, 0.404);
+            padding: 15px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <audio src="" controls id="audioPlayer">
+        Sorry, your browser doesn't support HTML5!
+    </audio>
+    <img class="bgxd" src="assets/img/rain.gif" alt="">
+    <div class="radio">
+
+        <div class="porra">
+        <div id="teste">
+        <img class="missyou" src="assets/img/missyou.jpg" alt="">
+        <img class="trigun" src="assets/img/trigun.jpg" alt=""/>
+        <img class="yamyam" src="assets/img/yamyam.jpg" alt="">
+        
+        </div>
+
+        <ul id="playlist">
+            <li class="current-song"><a href="assets/aud_vid/missyou.mp3">Miss You</a></li>
+            <li><a href="assets/aud_vid/trigun.mp3">楽園 (Trigun)</a></li>
+            <li><a href="assets/aud_vid/yamyam.mp3">Yam Yam</a></li>
+    </ul>
+    </div>
+    <div>
+    </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-2.2.0.js">
+    </script>
+    <script src="audioPlayer.js"></script>
+    <script>
+        audioPlayer();
+    </script>
+</body>
+</html>
